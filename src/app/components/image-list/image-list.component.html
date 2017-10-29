@@ -1,0 +1,53 @@
+<mat-card>
+    <mat-form-field>
+        <input class="search" matInput [(ngModel)]="searchQuery" name="search" placeholder="Search for images">
+    </mat-form-field>
+    <br>
+    <button (click)="searchImages(searchQuery)" mat-raised-button class="searchButton" type="button">Find Images</button>
+</mat-card>
+
+<div *ngIf="searching">
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>
+
+<mat-card>
+    <h4 *ngIf="imagesFound" mat-subheader>Results</h4>
+    <masonry [useImagesLoaded]="true">
+        <masonry-brick *ngFor="let image of images" class="image-container">
+            <mat-card>
+                <a href="{{image.pageURL}}" target="_blank">
+                    <mat-card-header>
+                        <div class="avatar" mat-card-avatar [ngStyle]="{'background-image':'url('+ image.userImageURL +')', 'background-size':'40px 40px'}"></div>
+                        <mat-card-title>User: {{image.user}}  </mat-card-title>
+                    </mat-card-header>
+                    <img mat-card-image src="{{image.webformatURL}}" />
+                    <mat-card-content>
+                        <p>Tags: {{image.tags}}</p>
+                        <p>Comments: {{image.comments}}</p>
+                        <p>Likes:  {{image.likes}}</p>
+                        <p>Views: {{image.views}}</p>
+                        <p>Downloads: {{image.downloads}}</p>
+                        <p>Favorites: {{image.favorites}}</p>
+                    </mat-card-content>
+                </a>
+            </mat-card>
+            <br><br>
+        </masonry-brick>
+    </masonry>
+</mat-card>
+
+<!-- <input class="search" [(ngModel)]="searchQuery" placeholder="Search some images"  name="some_name" value="">
+<button (click)="searchImages(searchQuery)" type="button">Find Images</button>
+
+<p *ngIf="searching">Fetching data...</p>
+
+<div *ngFor="let image of images" class="image-container">
+    <img src="{{image.webformatURL}}" alt="">
+    <p>Tags: {{image.tags}}</p>
+    <p>User: {{image.user}}</p>
+    <p>Comments: {{image.comments}}</p>
+    <p>Likes: {{image.likes}}</p>
+    <p>Views: {{image.views}}</p>
+    <p>Downloads: {{image.downloads}}</p>
+    <p>Favorites: {{image.favorites}}</p>
+</div> -->
