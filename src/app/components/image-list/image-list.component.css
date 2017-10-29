@@ -25,7 +25,6 @@
   max-height: 300px;
   margin: 8px;
   border-radius: 2px;
-  // h-length, v-length, blur, spread, colour
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .14);
   overflow: hidden;
 }

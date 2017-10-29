@@ -1,2 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+html {
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background: rgb(240, 249, 255);
+  background: -moz-linear-gradient(top, rgba(240, 249, 255, 1) 0%, rgba(161, 219, 255, 1) 100%);
+  background: -webkit-linear-gradient(top, rgba(240, 249, 255, 1) 0%, rgba(161, 219, 255, 1) 100%);
+  background: linear-gradient(top, rgba(240, 249, 255, 1) 0%, rgba(161, 219, 255, 1) 100%);
+  background-attachment: fixed;
+}
+
+body {
+  background-color: transparent !important;
+}

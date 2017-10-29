@@ -19,6 +19,24 @@ h1 {
   padding-bottom: 3px;
 }
 
+#title {
+  display: inline-block;
+  font-size: 3.6em;
+  font-family: "Fredoka One", cursive;
+  text-align: center;
+  padding-bottom: 0.5em;
+}
+
+.pixabayLogo {
+  width: 200px;
+}
+
+.logo {
+  padding-bottom: 24px;
+  text-align: center;
+  float: right;
+}
+
 #attribution {
   display: block;
   padding-bottom: 8px;
